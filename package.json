@@ -16,11 +16,14 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "grunt && mocha"
+    "test": "grunt && mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "grunt-tabs4life": "^1.0.11",
-    "hercule": "^3.0.2"
+    "hercule": "^3.0.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "^3.0.0",
@@ -34,5 +37,6 @@
   },
   "files": [
     "tasks"
-  ]
+  ],
+  "snyk": true
 }
